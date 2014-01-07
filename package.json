@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "Cylinder-Head-Sector Address (CHS)",
-  "kewords": [],
+  "keywords": [],
   "author": {
     "name": "Jonas Hermsmeier",
     "email": "jhermsmeier@gmail.com",
