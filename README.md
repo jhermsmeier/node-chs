@@ -1,14 +1,13 @@
-# CHS - Cylinder Head Sector Address
-[![build status](https://secure.travis-ci.org/jhermsmeier/node-chs.png)](http://travis-ci.org/jhermsmeier/node-chs)
-[![NPM version](https://badge.fury.io/js/chs.png)](https://npmjs.org/chs)
+# chs
+[![npm](http://img.shields.io/npm/v/chs.svg?style=flat-square)](https://npmjs.com/chs)
+[![npm downloads](http://img.shields.io/npm/dm/chs.svg?style=flat-square)](https://npmjs.com/chs)
+[![build status](http://img.shields.io/travis/jhermsmeier/node-chs.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-chs)
 
-
-## Install via [npm](https://npmjs.org)
+## Install via [npm](https://npmjs.com)
 
 ```sh
 $ npm install chs
 ```
-
 
 ## Usage
 
