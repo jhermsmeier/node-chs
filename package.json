@@ -1,24 +1,26 @@
 {
   "name": "chs",
-  "version": "0.1.0",
-  "license": "MIT",
+  "version": "0.2.0",
   "description": "Cylinder-Head-Sector Address (CHS)",
-  "keywords": [],
-  "author": {
-    "name": "Jonas Hermsmeier",
-    "email": "jhermsmeier@gmail.com",
-    "url": "https://github.com/jhermsmeier"
-  },
-  "main": "CHS",
-  "scripts": {
-    "test": "node node_modules/mocha/bin/mocha"
-  },
-  "dependencies": {
-    
-  },
+  "license": "MIT",
+  "keywords": [
+    "chs",
+    "address",
+    "cylinder",
+    "head",
+    "sector",
+    "mbr"
+  ],
+  "main": "lib/chs",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
+  "dependencies": {},
   "devDependencies": {
-    "mocha": ""
+    "mocha": "~2.2.4"
   },
+  "scripts": {
+    "test": "mocha"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-chs",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhermsmeier/node-chs.git"
