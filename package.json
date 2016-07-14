@@ -34,6 +34,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "docs": "echo '# API Reference' > API.md; jsdoc2md 'lib/**/*.js' --separators --global-index-format grouped --property-list-format list --param-list-format list >> API.md"
   }
 }
