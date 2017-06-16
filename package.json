@@ -1,6 +1,6 @@
 {
   "name": "chs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cylinder-Head-Sector Address (CHS)",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
