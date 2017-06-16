@@ -20,7 +20,7 @@
   "main": "lib/chs.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~3.1.0"
+    "mocha": "^3.4.2"
   },
   "homepage": "https://github.com/jhermsmeier/node-chs",
   "repository": {
