@@ -56,7 +56,7 @@ addr.parse( new Buffer([ 0xFE, 0xFF, 0xFF ]) )
 <a name="CHS"></a>
 
 ## CHS
-**Kind**: global class
+**Kind**: global class  
 
 * [CHS](#CHS)
     * [new CHS([cylinder], [head], [sector])](#new_CHS_new)
@@ -65,19 +65,22 @@ addr.parse( new Buffer([ 0xFE, 0xFF, 0xFF ]) )
         * [.head](#CHS+head) : <code>Number</code>
         * [.sector](#CHS+sector) : <code>Number</code>
         * [.buffer](#CHS+buffer) : <code>Buffer</code>
-        * [.setLBA(lba, hpt, spt)](#CHS+setLBA) ⇒ <code>[CHS](#CHS)</code>
+        * [.setLBA(lba, hpt, spt)](#CHS+setLBA) ⇒ [<code>CHS</code>](#CHS)
         * [.getLBA(hpt, spt)](#CHS+getLBA) ⇒ <code>Number</code>
         * [.toLBA(hpt, spt)](#CHS+toLBA) ⇒ <code>Number</code>
-        * [.clone()](#CHS+clone) ⇒ <code>[CHS](#CHS)</code>
-        * [.copy(target)](#CHS+copy) ⇒ <code>[CHS](#CHS)</code>
-        * [.parse(buffer)](#CHS+parse) ⇒ <code>[CHS](#CHS)</code>
+        * [.clone()](#CHS+clone) ⇒ [<code>CHS</code>](#CHS)
+        * [.copy(target)](#CHS+copy) ⇒ [<code>CHS</code>](#CHS)
+        * [.parse(buffer, [offset])](#CHS+parse) ⇒ [<code>CHS</code>](#CHS)
+        * [.write(buffer, [offset])](#CHS+write) ⇒ <code>Buffer</code>
         * [.toBuffer()](#CHS+toBuffer) ⇒ <code>Buffer</code>
+        * [.fromNumber(value)](#CHS+fromNumber) ⇒ [<code>CHS</code>](#CHS)
+        * [.toNumber()](#CHS+toNumber) ⇒ <code>Number</code>
     * _static_
-        * [.fromBuffer(buffer)](#CHS.fromBuffer) ⇒ <code>[CHS](#CHS)</code>
-        * [.fromLBA(lba, hpt, spt)](#CHS.fromLBA) ⇒ <code>[CHS](#CHS)</code>
+        * [.fromBuffer(buffer, [offset])](#CHS.fromBuffer) ⇒ [<code>CHS</code>](#CHS)
+        * [.fromLBA(lba, hpt, spt)](#CHS.fromLBA) ⇒ [<code>CHS</code>](#CHS)
 
 
--
+* * *
 
 <a name="new_CHS_new"></a>
 
@@ -91,50 +94,50 @@ Cylinder-Head-Sector Address
 - [sector] <code>Number</code> <code> = 63</code>
 
 
--
+* * *
 
 <a name="CHS+cylinder"></a>
 
 ### chS.cylinder : <code>Number</code>
 Cylinder
 
-**Kind**: instance property of <code>[CHS](#CHS)</code>
+**Kind**: instance property of [<code>CHS</code>](#CHS)  
 
--
+* * *
 
 <a name="CHS+head"></a>
 
 ### chS.head : <code>Number</code>
 Head
 
-**Kind**: instance property of <code>[CHS](#CHS)</code>
+**Kind**: instance property of [<code>CHS</code>](#CHS)  
 
--
+* * *
 
 <a name="CHS+sector"></a>
 
 ### chS.sector : <code>Number</code>
 Sector
 
-**Kind**: instance property of <code>[CHS](#CHS)</code>
+**Kind**: instance property of [<code>CHS</code>](#CHS)  
 
--
+* * *
 
 <a name="CHS+buffer"></a>
 
 ### chS.buffer : <code>Buffer</code>
 Get/set values from/to a Buffer
 
-**Kind**: instance property of <code>[CHS](#CHS)</code>
+**Kind**: instance property of [<code>CHS</code>](#CHS)  
 
--
+* * *
 
 <a name="CHS+setLBA"></a>
 
-### chS.setLBA(lba, hpt, spt) ⇒ <code>[CHS](#CHS)</code>
+### chS.setLBA(lba, hpt, spt) ⇒ [<code>CHS</code>](#CHS)
 Set CHS to a Logical Block Address (LBA)
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
 **Params**
 
 - lba <code>Number</code> - Logical Block Address
@@ -142,7 +145,7 @@ Set CHS to a Logical Block Address (LBA)
 - spt <code>Number</code> - Sectors per Track
 
 
--
+* * *
 
 <a name="CHS+getLBA"></a>
 
@@ -150,93 +153,131 @@ Set CHS to a Logical Block Address (LBA)
 Get the Logical Block Address (LBA)
 corresponding to the given disk geometry
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
-**Returns**: <code>Number</code> - lba
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
+**Returns**: <code>Number</code> - lba  
 **Params**
 
 - hpt <code>Number</code> - Heads per Track
 - spt <code>Number</code> - Sectors per Track
 
 
--
+* * *
 
 <a name="CHS+toLBA"></a>
 
 ### chS.toLBA(hpt, spt) ⇒ <code>Number</code>
-**Kind**: instance method of <code>[CHS](#CHS)</code>
-**Returns**: <code>Number</code> - lba
-**See**: #getLBA()
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
+**Returns**: <code>Number</code> - lba  
+**See**: #getLBA()  
 **Params**
 
 - hpt <code>Number</code> - Heads per Track
 - spt <code>Number</code> - Sectors per Track
 
 
--
+* * *
 
 <a name="CHS+clone"></a>
 
-### chS.clone() ⇒ <code>[CHS](#CHS)</code>
+### chS.clone() ⇒ [<code>CHS</code>](#CHS)
 Clone the CHS Address
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
 
--
+* * *
 
 <a name="CHS+copy"></a>
 
-### chS.copy(target) ⇒ <code>[CHS](#CHS)</code>
+### chS.copy(target) ⇒ [<code>CHS</code>](#CHS)
 Copy this address to a target address
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
 **Params**
 
-- target <code>[CHS](#CHS)</code>
+- target [<code>CHS</code>](#CHS)
 
 
--
+* * *
 
 <a name="CHS+parse"></a>
 
-### chS.parse(buffer) ⇒ <code>[CHS](#CHS)</code>
+### chS.parse(buffer, [offset]) ⇒ [<code>CHS</code>](#CHS)
 Parse a given Buffer
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
 **Params**
 
 - buffer <code>Buffer</code>
+- [offset] <code>Number</code> <code> = 0</code>
 
 
--
+* * *
+
+<a name="CHS+write"></a>
+
+### chS.write(buffer, [offset]) ⇒ <code>Buffer</code>
+Write the CHS address to a given buffer
+
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
+**Params**
+
+- buffer <code>Buffer</code>
+- [offset] <code>Number</code> <code> = 0</code>
+
+
+* * *
 
 <a name="CHS+toBuffer"></a>
 
 ### chS.toBuffer() ⇒ <code>Buffer</code>
 Create a Buffer representation of the CHS Address
 
-**Kind**: instance method of <code>[CHS](#CHS)</code>
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
 
--
+* * *
+
+<a name="CHS+fromNumber"></a>
+
+### chS.fromNumber(value) ⇒ [<code>CHS</code>](#CHS)
+Set the CHS address from its 24bit integer value
+
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
+**Params**
+
+- value <code>Number</code>
+
+
+* * *
+
+<a name="CHS+toNumber"></a>
+
+### chS.toNumber() ⇒ <code>Number</code>
+Get the 24bit integer value of the CHS address
+
+**Kind**: instance method of [<code>CHS</code>](#CHS)  
+
+* * *
 
 <a name="CHS.fromBuffer"></a>
 
-### CHS.fromBuffer(buffer) ⇒ <code>[CHS](#CHS)</code>
+### CHS.fromBuffer(buffer, [offset]) ⇒ [<code>CHS</code>](#CHS)
 Create a CHS Address from a given buffer
 
-**Kind**: static method of <code>[CHS](#CHS)</code>
+**Kind**: static method of [<code>CHS</code>](#CHS)  
 **Params**
 
 - buffer <code>Buffer</code>
+- [offset] <code>Number</code> <code> = 0</code>
 
 
--
+* * *
 
 <a name="CHS.fromLBA"></a>
 
-### CHS.fromLBA(lba, hpt, spt) ⇒ <code>[CHS](#CHS)</code>
+### CHS.fromLBA(lba, hpt, spt) ⇒ [<code>CHS</code>](#CHS)
 Create a CHS Address from a Logical Block Address (LBA)
 
-**Kind**: static method of <code>[CHS](#CHS)</code>
+**Kind**: static method of [<code>CHS</code>](#CHS)  
 **Params**
 
 - lba <code>Number</code> - Logical Block Address
@@ -244,5 +285,4 @@ Create a CHS Address from a Logical Block Address (LBA)
 - spt <code>Number</code> - Sectors per Track
 
 
--
-
+* * *
