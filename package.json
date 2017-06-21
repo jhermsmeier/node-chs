@@ -20,6 +20,7 @@
   "main": "lib/chs.js",
   "dependencies": {},
   "devDependencies": {
+    "jsdoc-to-markdown": "^3.0.0",
     "mocha": "^3.4.2"
   },
   "homepage": "https://github.com/jhermsmeier/node-chs",
@@ -35,6 +36,6 @@
   },
   "scripts": {
     "test": "mocha",
-    "docs": "echo '# API Reference' > API.md; jsdoc2md 'lib/**/*.js' --separators --global-index-format grouped --property-list-format list --param-list-format list >> API.md"
+    "docs": "echo '# API Reference' > API.md && jsdoc2md lib/*.js --separators --global-index-format grouped --property-list-format list --param-list-format list >> API.md"
   }
 }
